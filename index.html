@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nia Dicks - Front-End Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        header {
+            background: white;
+            max-width: 1200px;
+            padding: 50px;
+            text-align: center;
+            border-bottom: 3px solid #234207;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .headshot {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 25px;
+            border: 4px solid #234207;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            display: block;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #234207;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            color: #666;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+
+        section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        section a {
+            display: inline-block;
+            margin-right: 10px;
+            margin-top: 10px;
+            padding: 8px 18px;
+            background-color: #234207;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        h2 {
+            color: #234207;
+            font-size: 18px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        section > h2:first-child {
+            margin-top: 0;
+        }
+        
+        h3 {
+            color: #234207;
+            font-size: 14px;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        p, li {
+            margin-bottom: 10px;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 6px;
+        }
+
+        .intro-text {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .project {
+            background: #f8f9fa;
+            border-left: 4px solid #234207;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 3px;
+        }
+
+        .project h3 {
+            margin-top: 0;
+            color: #234207;
+        }
+
+        .project p {
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .project a {
+            display: inline-block;
+            margin-right: 10px;
+            margin-top: 10px;
+            padding: 8px 18px;
+            background-color: #234207;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .project a:hover {
+            background-color: #1a3005;
+        }
+
+        .tech-stack {
+            color: #888;
+            font-size: 12px;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .skill-tag {
+            background-color: #f0f7f0;
+            color: #234207;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid #234207;
+        }
+
+        .checkmark {
+            color: #234207;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .contact-section {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #ddd;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            padding: 10px 24px;
+            background-color: #234207;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .contact-links a:hover {
+            background-color: #1a3005;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            font-size: 11px;
+            color: #999;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                max-width: 100%;
+                box-shadow: none;
+                padding: 0;
+            }
+            
+            h2 {
+                page-break-after: avoid;
+            }
+            
+            section {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+
+            .contact-links {
+                flex-direction: column;
+            }
+
+            .contact-links a {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./headshot.png" alt="Nia Dicks" class="headshot">
+        <h1>Nia Dicks</h1>
+        <p>Front-End Developer</p>
+        <div class="contact-links">
+                <a href="mailto:niadicks03@gmail.com">Email</a>
+                <a href="tel:+18648844509">Phone</a>
+                <a href="https://github.com/ndicks08" target="_blank">GitHub</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- About Section -->
+        <section>
+            <h2>About Me</h2>
+            <p class="intro-text">
+                I'm a Front-End Developer with a Bachelor's degree in Computer Science from Clemson University. I am currently working toward a Master's degree at Clemson University, specializing in Human-Centered Computing. With professional experience building interactive dashboards and web applications, I'm passionate about creating intuitive user experiences and writing clean, maintainable code.
+            </p>
+            <p class="intro-text" style="margin-top: 15px;">
+                Over two summers at Jobscope Enterprise Edition, I gained hands-on experience in full-stack development, working with React, TypeScript, Power BI, and SQL. I've led projects from design through deployment, including a capstone website for Clemson's Computer Science program and freelance web development work. I'm eager to take on challenging projects and continue growing as a developer.
+            </p>
+            <div class="skills">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">HTML & CSS</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Power BI</span>
+                <span class="skill-tag">Git & GitHub</span>
+                <span class="skill-tag">Python</span>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section>
+            <h2>Resume</h2>
+            <p style="margin-bottom: 20px;">
+                Download my resume to see my full education, experience, skills, and accomplishments.
+            </p>
+            <a href="./Nia_Dicks_Resume.pdf" target="_blank">
+                Download Resume (PDF)
+            </a>
+        </section>
+
+        <!-- Projects Section -->
+        <section>
+            <h2>Projects</h2>
+
+            <div class="project">
+                <h3>Clemson CS Capstone Website</h3>
+                <p>
+                    A React-based website for Clemson University's Computer Science capstone program. I lead the design, development, and deployment of this platform, enhancing user experience and functionality for students and faculty.
+                </p>
+                <div class="tech-stack">Tech Stack: React, JavaScript, CSS, Responsive Design</div>
+                <a href="https://cs_capstone.sites.clemson.edu/" target="_blank">View Project</a>
+            </div>
+
+            <div class="project">
+                <h3>Gentle Scripts Website</h3>
+                <p>
+                    A fully designed and developed website for a pharmaceutical consulting company. I created and deployed this site using modern web development practices, with ongoing enhancements to improve the company's brand presence and online functionality.
+                </p>
+                <div class="tech-stack">Tech Stack: Web Development, Responsive Design, Hosting</div>
+                <a href="https://gentlescripts.com/" target="_blank">View Project</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Nia Dicks. All rights reserved.</p>
+    </footer>
+</body>
+</html>
